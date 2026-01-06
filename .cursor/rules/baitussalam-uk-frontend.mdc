@@ -1,0 +1,75 @@
+---
+alwaysApply: true
+---
+
+1. Code Analysis & Understanding
+- First, thoroughly analyze the entire codebase structure
+- Map out data flow, component hierarchy, and API call patterns
+- Identify repeated API calls and state management opportunities
+- Document current SSR implementation and identify gaps
+
+2. Zustand State Management
+- Create centralized stores for frequently accessed data
+- Replace duplicate API calls with store access
+- Add loading states and error handling in stores
+- Use store persistence where appropriate (localStorage/sessionStorage)
+
+3. Server-Side Rendering (SSR)
+- Convert client-side data fetching to getServerSideProps/getStaticProps
+- Ensure all page components support SSR
+- Move authentication/authorization logic to server side when possible
+- Use Next.js API routes for server-side operations
+- Implement proper loading states for SSR hydration
+- Add error boundaries for SSR failures
+
+4. Image Optimization
+- Replace all <img> tags with Next.js <Image> component
+- Add appropriate width, height, and alt attributes
+- Configure proper image domains in next.config.js
+- Use priority prop for above-the-fold images
+- Implement responsive images with sizes attribute
+- Example: 
+// Before
+<img src="/photo.jpg" alt="description" />
+
+// After  
+<Image 
+  src="/photo.jpg" 
+  alt="description" 
+  width={500} 
+  height={300}
+  priority={true}
+/>
+
+
+5. Performance Optimization
+- Implement React.memo for expensive components
+- Use useCallback and useMemo to prevent unnecessary re-renders
+- Optimize bundle size by code splitting with dynamic imports
+- Add proper caching headers for static assets
+- Remove unused dependencies and dead code
+
+6. Code Quality & Best Practices
+- Add proper error handling and validation
+- Implement proper SEO meta tags in all pages
+- Follow accessibility standards (ARIA labels, semantic HTML)
+- Add comprehensive comments for complex logic
+- Maintain consistent code formatting and structure
+
+7. Implementation Priority Order
+- Fix critical SSR issues first
+- Replace repeated API calls with Zustand stores
+- Convert all images to Next.js Image component
+- Optimize performance and bundle size
+
+8. Validation Requirements
+- All pages must render correctly with JavaScript disabled
+- No console errors in development or production
+- Lighthouse score improvement in performance, accessibility, SEO
+- Maintain consistent code formatting and structure
+
+9. Reporting
+- Provide summary of changes made in each category
+- Document performance improvements (before/after metrics)
+- List any breaking changes or migration requirements
+- Suggest further optimization opportunities
