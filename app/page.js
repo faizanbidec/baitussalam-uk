@@ -58,7 +58,7 @@ export default function HomePage() {
       <HeroSection />
 
       <>
-        <TransformingSection />
+        {/* <TransformingSection /> */}
 
         <Humanitysection />
 
@@ -98,7 +98,7 @@ export default function HomePage() {
                 { img: "/Vector.png", title: "50+ Water Projects",desc:"Providing clean and safe water to communities in need across the region.",},
                 { img: "/cap.png", title: "200+ Children Sponsored", desc:"Supporting education and well-being for over 200 children and their families." },
                 { img: "/child.png", title: "50+ Community Projects",desc:" Implementing sustainable projects that uplift and strengthen local communities." },
-                { img: "/family.png", title: "500+ Volunteers", desc:"Engaging over 500 volunteers in meaningful service and community support." },
+                { img: "/family.png", title: "10+ Volunteers", desc:"Engaging over 10 volunteers in meaningful service and community support." },
               ].map((item, index) => (
                 <div
                   key={index}

@@ -17,7 +17,7 @@ export default function Humanitysection({
     const router = useRouter(); // ✅ Initialize router
 
   return (
-    <section className="relative flex flex-col lg:flex-row items-center justify-between bg-white overflow-hidden px-6 sm:px-10 lg:px-12 py-16 lg:py-18 mt-32  gap-6">
+    <section className="relative flex flex-col lg:flex-row items-center justify-between bg-white overflow-hidden px-6 sm:px-10 lg:px-12 py-16 lg:py-18 mt-20  gap-6">
       {/* LEFT SIDE - TEXT */}
 
       

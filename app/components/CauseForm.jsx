@@ -45,7 +45,7 @@ const CauseForm = () => {
               </select>
             </div>
 
-            {/* Donation Type */}
+            Donation Type
             <div>
               <label className="block text-gray-700 font-semibold mb-1">
                 Donation Type

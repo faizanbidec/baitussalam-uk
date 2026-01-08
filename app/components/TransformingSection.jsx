@@ -349,7 +349,7 @@ const filteredServices = selectedCampaign
         >
           {/* Service Dropdown */}
          {/* Service Dropdown */}
-<select
+{/* <select
   value={selectedService}
   onChange={(e) => {
     setSelectedService(e.target.value);
@@ -378,12 +378,12 @@ const filteredServices = selectedCampaign
       {cause.title}
     </option>
   ))}
-</select>
+</select> */}
 
 
 
 {/* Campaign Dropdown */}
-<select
+{/* <select
   value={selectedCampaign}
   onChange={(e) => {
     setSelectedCampaign(e.target.value);
@@ -412,11 +412,11 @@ const filteredServices = selectedCampaign
       {camp.title}
     </option>
   ))}
-</select>
+</select> */}
 
 
           {/* Donation Frequency Dropdown */}
-          <select
+          {/* <select
             value={donationFrequency}
             onChange={(e) => setDonationFrequency(e.target.value)}
             className="responsive-dropdown"
@@ -440,10 +440,10 @@ const filteredServices = selectedCampaign
                 {freq}
               </option>
             ))}
-          </select>
+          </select> */}
 
           {/* Donation Type Dropdown */}
-          <select
+          {/* <select
             value={donationType}
             onChange={(e) => setDonationType(e.target.value)}
             className="responsive-dropdown"
@@ -467,10 +467,10 @@ const filteredServices = selectedCampaign
                 {type}
               </option>
             ))}
-          </select>
+          </select> */}
 
           {/* Amount Dropdown */}
-          <select
+          {/* <select
             value={amount}
             onChange={(e) => setAmount(e.target.value)}
             className="responsive-dropdown"
@@ -494,10 +494,10 @@ const filteredServices = selectedCampaign
                 £{amt}
               </option>
             ))}
-          </select>
+          </select> */}
 
           {/* Donate Now Button */}
-          <button
+          {/* <button
             onClick={handleDonateNow}
             style={{
               backgroundColor: "#BC153F",
@@ -513,7 +513,7 @@ const filteredServices = selectedCampaign
             }}
           >
             Donate Now
-          </button>
+          </button> */}
         </div>
 
         {/* Heading */}
