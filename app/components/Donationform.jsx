@@ -63,6 +63,7 @@ useEffect(() => {
   // Use causesData if provided, otherwise use from store
   // const servicesList = causesData.length > 0 ? causesData : causes;
   const servicesList = causes; 
+  console.log("Services List:", causes);
 
   const modalRef = useRef(null);
 
@@ -182,17 +183,27 @@ useEffect(() => {
       };
 
       // Add support_program or support_service based on selection
-      if (selectedCampaignOption) {
-        const campaignId = findCampaignId(selectedCampaignOption);
-        if (campaignId) {
-          payload.category_id = campaignId;
-        }
-      } else if (selectedServiceOption) {
-        const serviceId = findServiceId(selectedServiceOption);
-        if (serviceId) {
-          payload.support_service = serviceId;
-        }
-      }
+     if (selectedCampaignOption) {
+  const campaignId = findCampaignId(selectedCampaignOption);
+
+  if (!campaignId) {
+    throw new Error("Invalid campaign selected");
+  }
+
+  payload.category_id = Number(campaignId);
+}
+
+if (selectedServiceOption) {
+  const serviceId = findServiceId(selectedServiceOption);
+
+  if (!serviceId) {
+    throw new Error("Invalid service selected");
+  }
+
+  payload.category_id = Number(serviceId); // 👈 REQUIRED
+  payload.support_service = Number(serviceId);
+}
+console.log("idddddddd",combinedCampaignOptions[0]);
 
       // Call API
       const response = await transactionAPI.createTransaction(payload);

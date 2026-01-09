@@ -95,10 +95,10 @@ export default function HomePage() {
             {/* Cards Container */}
             <div className="flex flex-wrap justify-center lg:ml-8 lg:max-w-[80vw] gap-6 lg:justify-between">
               {[
-                { img: "/Vector.png", title: "50+ Water Projects",desc:"Providing clean and safe water to communities in need across the region.",},
-                { img: "/cap.png", title: "200+ Children Sponsored", desc:"Supporting education and well-being for over 200 children and their families." },
-                { img: "/child.png", title: "50+ Community Projects",desc:" Implementing sustainable projects that uplift and strengthen local communities." },
-                { img: "/family.png", title: "10+ Volunteers", desc:"Engaging over 10 volunteers in meaningful service and community support." },
+                { img: "/Vector.png", title: "50+ Water Projects", desc: "Providing clean and safe water to communities in need across the region.", },
+                { img: "/cap.png", title: "200+ Children Sponsored", desc: "Supporting education and well-being for over 200 children and their families." },
+                { img: "/child.png", title: "50+ Community Projects", desc: " Implementing sustainable projects that uplift and strengthen local communities." },
+                { img: "/family.png", title: "10+ Volunteers", desc: "Engaging over 10 volunteers in meaningful service and community support." },
               ].map((item, index) => (
                 <div
                   key={index}
@@ -110,7 +110,7 @@ export default function HomePage() {
                       src={item.img}
                       alt={item.title}
                       width={50} // image ka natural size bigger rakho
-    height={50}
+                      height={50}
                       className="object-contain"
                       sizes="(max-width: 640px) 40px, 44px"
                     />

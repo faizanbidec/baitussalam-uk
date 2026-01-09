@@ -40,11 +40,11 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <ErrorBoundary>
+        {/* <ErrorBoundary> */}
           <Navbar/>
           {children}
           <Footer/>
-        </ErrorBoundary>
+        {/* </ErrorBoundary> */}
       </body>
     </html>
   );
