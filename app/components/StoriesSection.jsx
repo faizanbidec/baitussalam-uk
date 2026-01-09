@@ -63,13 +63,13 @@ const Storiessection = ({
   // Determine image URL
   const imageUrl =
     storyProp || story?.images?.[0]?.image_path?.startsWith("/")
-      ? story.images[0].image_path // static / public folder image
+      ? story.images[0]?.image_path // static / public folder image
       : story?.images?.[0]?.image_path.startsWith("http")
-      ? story.images[0].image_path // full URL from API
+      ? story.images[0]?.image_path // full URL from API
       : `${(process.env.NEXT_PUBLIC_BASE_IMAGE_URL || "").replace(
           /\/$/,
           ""
-        )}/${story.images[0].image_path}`; // relative path from API
+        )}/${story.images[0]?.image_path}`; // relative path from API
 
   return (
     <section
